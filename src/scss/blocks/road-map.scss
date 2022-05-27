@@ -3,7 +3,6 @@
     width: 100%;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
-    //grid-template-rows: repeat(12, max-content);
     row-gap: 50px;
     @media (max-width:$mobile){
       row-gap: 30px;
@@ -43,16 +42,16 @@
     @media (max-width:$tablet){
       grid-column: 1/6;
     }
-    @media (max-width: 580px){
+    @media (max-width:$mobile){
       grid-column: 1/7;
     }
+    @media (max-width: 580px){
+      grid-column: 1/9;
+    }
     @media (max-width: 500px){
-      grid-column: 1/8;
-      grid-row: 3/4;
+      grid-column: 1/13;
     }
-    @media (max-width: 400px){
-      grid-column: 2/12;
-    }
+
   }
 
   &__challenge {
@@ -65,20 +64,16 @@
     @media (max-width:$mobile){
       grid-column: 7/13;
     }
-    @media (max-width: 580px){
-      grid-column: 5/13;
+    @media (max-width:$mobile){
+      grid-column: 6/13;
       grid-row: 4/5;
       margin-top: 0;
     }
-    @media (max-width: 500px){
+    @media (max-width: 580px){
       grid-column: 4/13;
-      grid-row: 4/5;
-
+      margin-top: 0;
     }
     @media (max-width:$mobileSmall){
-      grid-column: 2/12;
-    }
-    @media (max-width:400px){
       grid-column: 1/13;
     }
   }
@@ -91,39 +86,38 @@
       grid-row: 5/6;
       margin-top: -50%;
     }
-    @media (max-width: 580px){
-      grid-column: 1/7;
+    @media (max-width:$mobile){
       grid-row: 5/6;
+      grid-column: 1/8;
       margin-top: 0%;
     }
-    @media (max-width: 500px){
-      grid-column: 1/8;
-      grid-row: 5/6;
+    @media (max-width: 580px){
+      grid-column: 1/10;
     }
-    @media (max-width: 400px){
-      grid-column: 2/12;
+    @media (max-width:$mobileSmall){
+      grid-column: 1/13;
     }
   }
 
   &__last-project {
     grid-column: 1/13;
     grid-row: 6/7;
-    @media (max-width: 580px){
-      grid-row: 6/7;
-    }
   }
 
   &__githab {
     grid-column: 3/9;
     grid-row: 7/8;
+    @media (max-width:$mobile){
+      grid-column: 3/10;
+    }
     @media (max-width:$mobileSmall){
       grid-column: 2/11;
     }
     @media (max-width: 580px){
-      grid-column: 3/11;
-    }
-    @media (max-width: 400px){
       grid-column: 2/12;
+    }
+    @media (max-width:$mobileSmall){
+      grid-column: 1/13;
     }
   }
 }
@@ -173,7 +167,7 @@
   border-bottom: 2px solid $orangeColor;
   @media (max-width:$tablet){
     border-top: 1px solid $orangeColor;
-  border-bottom: 1px solid $orangeColor;
+    border-bottom: 1px solid $orangeColor;
   }
   &-title {
     font-size: 36px;
@@ -204,11 +198,10 @@
     }
     @media (max-width:$tablet){
       font-size: 18px;
-      line-height: 20px;
+      line-height: 24px;
     }
     @media (max-width:$mobile){
       font-size: 16px;
-      line-height: 16px;
     }
   }
   &-link {

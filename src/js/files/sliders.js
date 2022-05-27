@@ -4,7 +4,7 @@ if (document.querySelector('.skills-card') && window.screen.width < 768) {
     observeParents: true,
     // SLIDES ==================================================================================
     slidesPerView: 1,
-    spaceBetween: 10,
+    spaceBetween: 5,
     slidesPerGroup: 1,
     watchOverflow: true,
     speed: 800,              //? скорость прокрутки
@@ -37,9 +37,6 @@ if (document.querySelector('.skills-card') && window.screen.width < 768) {
     breakpoints: {
       320: {
         slidesPerView: 3,
-      },
-      400: {
-        slidesPerView: 4,
       },
       700: {
         slidesPerView: 5,

@@ -3,19 +3,10 @@
   width: 100%;
   z-index: 50;
   &._fix {
-      position: fixed;
-      background-color: $orangeColor;
-      transition: all 0.3s ease 0s;
-      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-      .icon-menu {
-        &:hover {
-          span,
-          &::before,
-          &::after {
-            background-color: $darkColor;
-          }
-        }
-      }
+    position: fixed;
+    background-color: $darkColor;
+    transition: all 0.3s ease 0s;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
   }
   &__container {
     position: relative;
@@ -53,8 +44,23 @@
     background-color: $orangeColor;
     z-index: 50;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-    
-
+    @media (max-width:$mobileSmall){
+      align-items: center;
+    }
+    .menu__social-links {
+      gap: 10px;
+      justify-content:space-between;
+      padding: 10px 30px 30px;
+      @media (max-width:$mobileSmall){
+        justify-content: center;
+        gap: 20px;
+      }
+    }
+    .social-link {
+      &:hover {
+        color: $lightColor;
+      }
+    }
     &.open-menu {
       right: 0%;
       @media (max-width:$pc){
@@ -89,11 +95,6 @@
     @media (max-width: 400px){
       align-items: center;
       text-align: center;
-    }
-    .menu__social-links {
-      gap: 10px;
-      justify-content:space-between;
-      margin-top: 20px;
     }
   }
   &__header {

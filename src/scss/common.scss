@@ -53,6 +53,8 @@
 .social-link {
   flex: 0 0 30px;
   height: 32px;
+  transition: all 0.3s ease 0s;
+  
 
   &:hover {
     color: $orangeColor;
@@ -61,23 +63,6 @@
     height: 100%;
     width: 100%;
   }
-}
-
-.social-links--float {
-  position: fixed;
-  left: 5%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  opacity: 0.8;
-  flex-direction: column;
-  .social-link {
-    flex: 0 0 37px;
-    height: 26px;
-    &--youtube {
-      margin-bottom: -4px;
-    }
-  }
-  
 }
 
 .user-contact {

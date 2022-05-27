@@ -124,16 +124,16 @@
   &__description {
     line-height: 29px;
     padding: 35px 0;
-    border-top:  3px solid $orangeColor;
-    border-bottom:  3px solid $orangeColor;
+    border-top:  2px solid $orangeColor;
+    border-bottom:  2px solid $orangeColor;
     margin-bottom: 15px;
     @media (max-width:$pc){
       padding: 18px 0;
       font-size: 22px;
     }
     @media (max-width:$tablet){
-      border-top:  3px solid $orangeColor;
-      border-bottom:  3px solid $orangeColor;
+      border-top:  1px solid $orangeColor;
+      border-bottom:  1px solid $orangeColor;
       padding: 15px 0;
       font-size: 20px;
       margin-bottom: 20px;
