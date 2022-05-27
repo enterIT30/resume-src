@@ -1,0 +1,116 @@
+.main-page {
+  background-color: $darkColor;
+  background-image: url(../img/main-page_bg.png);
+  background-repeat: no-repeat;
+  background-size: auto 100%;
+  background-position: 75% 0;
+  height: 100vh;
+  min-height: 500px;
+  color: $lightColor;
+  margin-bottom: 1px;
+  @media (max-width:$pc){
+    background-size: auto 100%;
+    background-position: 95% 0;
+  }
+  @media (max-width:$tablet){
+    background-size: 80% auto;
+    background-position: 120% 100%;
+  }
+  @media (max-width:$mobile){
+    background-size: 85% auto;
+    background-position: 205% 100%;
+  }
+  @media (max-width:$mobileSmall){
+    background-size: 121% auto;
+    background-position: -20% 100%;
+  }
+  @media (max-width: 350px){
+    background-size: 125% auto;
+    background-position: 0% 100%;
+  }
+
+  &__container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+  }
+  &__greeting {
+    max-width: 510px;
+    @media (max-width:$tablet){
+      max-width: 400px;
+    }
+    @media (max-width:$mobile){
+      max-width: 320px;
+    }
+    @media (max-width:$mobileSmall){
+      max-width: 230px;
+    }
+    @media (max-width: 350px){
+      max-width: 250px;
+    }
+  }
+  &__title {
+    max-width: 100%;
+    color: $orangeColor;
+    font-size: rem(80);
+    //margin-top: 15px;
+    margin-bottom: 40px;
+    @media (max-width:$tablet){
+      font-size: rem(60);
+      margin-bottom: 30px;
+    }
+    @media (max-width:$mobile){
+      font-size: rem(50);
+    }
+    @media (max-width:$mobileSmall){
+      font-size: rem(38);
+      font-weight: 600;
+    }
+    @media (max-width: 350px){
+      font-size: rem(38);
+    }
+  }
+  &__subtitle {
+    max-width: 100%;
+    font-size: rem(28);
+    line-height: 1.2em;
+    margin-bottom: 30px;
+    @media (max-width:$tablet){
+      font-size: rem(22);
+      margin-bottom: 25px;
+    }
+    @media (max-width:$mobile){
+      font-size: rem(18);
+    }
+    @media (max-width:$mobileSmall){
+      font-size: rem(16);
+    }
+    @media (max-width: 350px){
+      font-weight: 600;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__social-links {
+    max-width: 230px;
+    @media (max-width:$mobile){
+      max-width: 200px;
+    }
+    @media (max-width:$mobileSmall){
+      gap: 20px;
+      min-width: 50px;
+      max-width: 90px;
+    }
+    @media (max-width: 350px){
+      gap: 10px;
+      width: 50px;
+    }
+  }
+  &__social-link {
+    flex: 0 0 30px;
+    height: 30px;
+  }
+}
+

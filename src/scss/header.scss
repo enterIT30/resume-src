@@ -1,0 +1,223 @@
+.header {
+  position: absolute;
+  width: 100%;
+  z-index: 50;
+  &._fix {
+      position: fixed;
+      background-color: $orangeColor;
+      transition: all 0.3s ease 0s;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      .icon-menu {
+        &:hover {
+          span,
+          &::before,
+          &::after {
+            background-color: $darkColor;
+          }
+        }
+      }
+  }
+  &__container {
+    position: relative;
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    column-gap: 15px;
+  }
+  &__logo {
+    width: 71px;
+    height: 71px;
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    @media (max-width:$mobile){
+      width: 55px;
+      height: 55px;
+    }
+  }
+}
+
+.menu {
+  position: relative;
+  &__body {
+    position: fixed;
+    top: 0;
+    right: -150%;
+    display: flex;
+    align-items: flex-start;
+    flex-direction: column;
+    height: 100%;
+    width: 400px;
+    transition: right 0.3s ease 0s;
+    background-color: $orangeColor;
+    z-index: 50;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    
+
+    &.open-menu {
+      right: 0%;
+      @media (max-width:$pc){
+        width: 350px;
+      }
+      @media (max-width:$tablet){
+        width: 300px;
+      }
+      @media (max-width: 480px){
+        width: 100%;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 25px;
+    height: 100%;
+    width: 100%;
+    padding: 15% 30px 0;
+    color: $darkColor;
+    font-size: rem(24);
+    overflow: auto;
+    @media (max-width:$mobileSmall) {
+      align-items: center;
+      width: 100%;
+      padding: 0 0 10px;
+    }
+    @media (max-width: 400px){
+      align-items: center;
+      text-align: center;
+    }
+    .menu__social-links {
+      gap: 10px;
+      justify-content:space-between;
+      margin-top: 20px;
+    }
+  }
+  &__header {
+    position: relative;
+    flex: 0 0 71px;
+    width: 100%;
+    @media (max-width:$mobile){
+      flex: 0 0 55px;
+    }
+    @media (max-width:$mobileSmall){
+      flex: 0 0 20%;
+    }
+  }
+  &__item {
+    &:hover {
+      transition: all 0.3s ease 0s;
+      color: $lightColor;
+    }
+  }
+}
+
+//Burger
+.icon-menu {
+	display: block;
+  position: relative;
+  flex: 0 0 30px;
+  height: 18px;
+  cursor: pointer;
+  z-index: 5;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    span,
+    &::before,
+    &::after {
+      background-color: $orangeColor;
+    }
+  }
+  span,
+  &::before,
+  &::after {
+    content: "";
+    transition: all 0.3s ease 0s;
+    right: 0;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background-color: $lightColor;
+  }
+  &::before {
+    top: 0;
+  }
+  &::after {
+    bottom: 0;
+  }
+  span {
+    top: calc(50% - 1px);
+  }
+  @media (max-width:$mobileSmall){
+    z-index: 80;
+    &.open-menu {
+      &::before,
+		  &::after {
+        background-color: $darkColor;
+      }
+			span {
+				width: 0;
+			}
+			&::before {
+				top: calc(50% - 1px);
+				transform: rotate(-45deg);
+			}
+			&::after {
+				bottom: calc(50% - 1px);
+				transform: rotate(45deg);
+			}
+		}
+  }
+}
+
+.arrow {
+  position: absolute;
+  left: 30px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 80;
+  width: 30px;
+  height: 30px;
+  transition: all 0.3s ease 0s;
+  &:hover {
+    span,
+    &::before,
+    &::after {
+      transition: all 0.3s ease 0s;
+      background-color: $lightColor;
+    }
+  }
+
+  span,
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    transform: translateY(0%);
+    height: 2px;
+    background-color: $darkColor;
+  }
+  span {
+    width: 100%;
+  }
+  &::before,
+  &::after {
+    transform-origin: right;
+    width: 50%;
+    height: 2px;
+  }
+  &::before{
+    transform: translateY(30%) rotate(45deg);
+  }
+  &::after {
+    transform: translateY(-30%) rotate(-45deg);
+  }
+  @media (max-width:$mobileSmall){
+    display: none;
+  }
+}

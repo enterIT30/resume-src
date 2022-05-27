@@ -1,0 +1,391 @@
+.user-info {
+  background-color: $lightColor;
+  padding: 0 50px;
+  @media (max-width:$mobile){
+    padding: 0 30px;
+  }
+  @media (max-width:$mobileSmall){
+    padding: 0;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: stretch;
+    justify-content: space-between;
+    column-gap: 50px;
+    margin-bottom: 50px;
+    @media (max-width:$pc){
+      column-gap: 30px;
+    }
+    @media (max-width:$tablet){
+      flex-direction: column;
+      row-gap: 10px;
+    }
+    @media (max-width:$mobile){
+      margin-bottom: 30px;
+    }
+  }
+
+  &__left {
+    flex: 0 0 350px;
+    display: flex;
+    flex-direction: column;
+    @media (max-width:$tablet){
+      order:1;
+      flex: 0 1 auto;
+      width: 200px;
+    }
+  }
+  &__photo {
+    flex: 0 1 350px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    object-fit: cover;
+    img {
+      width: 100%;
+    }
+    @media (max-width:$tablet){
+      display: none;
+    }
+  }
+  &__download {
+    padding: 20px 30px;
+    background-color: $orangeColor;
+    color: $lightColor;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 44px;
+    transition: box-shadow 0.3s ease 0s;
+    &:hover {
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+    }
+    svg {
+      width: 30px;
+      height: 30px;
+      color: $lightColor;
+      @media (max-width:$tablet){
+        width: 20px;
+        height: 20px;
+      }
+    }
+    @media (max-width:$pc){
+      font-size: 28px;
+      padding: 18px 35px;
+    }
+    @media (max-width:$tablet){
+      font-size: 17px;
+      height: 35px;
+      padding: 0 15px;
+    }
+
+    img {
+      width: 40px;
+      height: 38px;
+      @media (max-width:$tablet){
+        width: 20px;
+        height: 19px;
+      }
+    }
+  }
+
+  &__right {
+    flex: 0 1 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-between;
+    @media (max-width:$tablet){
+      flex: 1 1 100%;
+    }
+  }
+
+  &__title {
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+    @media (max-width:$pc){
+      font-size: 44px;
+    }
+    @media (max-width:$tablet){
+      margin-bottom: 20px;
+      font-size: 36px;
+    }
+    @media (max-width:$mobile){
+      font-size: 32px;
+    }
+    @media (max-width:$mobileSmall){
+      font-size: 22px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__description {
+    line-height: 29px;
+    padding: 35px 0;
+    border-top:  3px solid $orangeColor;
+    border-bottom:  3px solid $orangeColor;
+    margin-bottom: 15px;
+    @media (max-width:$pc){
+      padding: 18px 0;
+      font-size: 22px;
+    }
+    @media (max-width:$tablet){
+      border-top:  3px solid $orangeColor;
+      border-bottom:  3px solid $orangeColor;
+      padding: 15px 0;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    @media (max-width:$mobileSmall){
+      font-size: 16px;
+      margin-bottom: 15px;
+    }
+  }
+
+  &__contact {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    column-gap: 20px;
+    flex-wrap: wrap;
+  }
+/*   &__additional-information {
+  } */
+}
+
+.additional-information {
+  display: grid;
+  grid-template-areas:
+    "engineer engineer"
+    "youtube codewars"
+    "youtube githab"
+    "experience experience";
+  grid-template-rows: repeat(4, min-content);
+  grid-template-columns: 32% calc(68% - 30px);
+  grid-gap: 30px;
+  @media (max-width:$pc){
+    grid-template-columns: 38% calc(62% - 25px);
+    grid-gap: 25px;
+  }
+  @media (max-width:$tablet){
+    grid-template-areas:
+      "engineer engineer"
+      "youtube youtube"
+      "codewars githab"
+      "experience experience";
+    grid-template-columns: 49% calc(51% - 25px);
+  }
+  @media (max-width: 700px){
+    grid-template-areas:
+      "engineer"
+      "youtube "
+      "codewars"
+      "githab"
+      "experience";
+    grid-template-columns: 1fr;
+  }
+  @media (max-width:$mobileSmall){
+    grid-gap: 20px;
+  }
+
+  &__item {
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    //border: 1px solid $darkColor;
+    .circle{
+      &::after {
+        content:'';
+        position: absolute;
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+    }
+  }
+  &__title {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    padding: 10px 15px;
+    font-weight: 600;
+    text-align: start;
+    background-color: rgba(0, 0, 0, 0.05);
+    //border-bottom: 1px solid $darkColor;
+    @media (max-width:$pc){
+      font-size: 22px;
+    }
+    @media (max-width:$mobile){
+      font-size: 18px;
+    }
+    @media (max-width: 700px){
+      padding-right: 50px;
+    }
+    @media (max-width:$mobileSmall){
+      font-size: 18px;
+    }
+    &~div {
+      padding: 10px 15px;
+      line-height: 29px;
+      font-size: 20px;
+      @media (max-width:$pc){
+        font-size: 18px;
+      }
+      @media (max-width:$mobile){
+        font-size: 16px;
+      }
+      @media (max-width:$mobileSmall){
+        font-size: 16px;
+      }
+    }
+  }
+}
+
+#engineer {
+  grid-area: engineer;
+  .circle{
+    &::after{
+      background-image: url(../img/icon/engineer.png);
+      left: 21px;
+      top: 16px;
+      width: 55px;
+      height: 55px;
+      @media (max-width:$mobileSmall){
+        width: 43px;
+        height: 43px;
+        left: 10px;
+        top: 3px;
+      }
+    }
+  }
+}
+#youtube {
+  grid-area: youtube;
+  .circle{
+    &::after{
+      background-image: url(../img/icon/youtube-telegram.png);
+      left: -12px;
+      top: -11px;
+      width: 85px;
+      height: 85px;
+      @media (max-width:$mobileSmall){
+        width: 60px;
+        height: 60px;
+        left: -7px;
+        top: -11px;
+      }
+    }
+  }
+}
+#codewars {
+  grid-area: codewars;
+  .circle {
+    &::after{
+      background-image: url(../img/icon/codewars.png);
+      background-size: 95%;
+      left: 22px;
+      top: 13px;
+      width: 55px;
+      height: 55px;
+      @media (max-width:$mobileSmall){
+        width: 43px;
+        height: 43px;
+        left: 11px;
+        top: 9px;
+        background-size: 85%;
+      }
+    }
+  }
+}
+#githab {
+  grid-area: githab;
+  .circle {
+    &::after{
+      background-image: url(../img/icon/githab.png);
+      background-size: 105%;
+      left: 11px;
+      top: 15px;
+      width: 55px;
+      height: 55px;
+      @media (max-width:$mobileSmall){
+        width: 43px;
+        height: 43px;
+        left: 8px;
+        top: 4px;
+      }
+    }
+  }
+}
+#experience {
+  grid-area: experience;
+  .circle {
+    &::after{
+      background-image: url(../img/icon/notebook.png);
+      left: 19px;
+      top: 15px;
+      width: 55px;
+      height: 55px;
+      @media (max-width:$mobileSmall){
+        width: 43px;
+        height: 43px;
+        left: 10px;
+        top: 8px;
+        background-size: 89%;
+      }
+    }
+  }
+}
+
+.circle {
+  position: relative;
+  flex: 0 0 60px;
+  height: 60px;
+  background: $orangeColor;
+  border-radius: 50%;
+  margin-right: 40px;
+  @media (max-width:$tablet){
+    margin-right: 30px;
+  }
+  @media (max-width: 700px){
+    margin-right: 25px;
+  }
+  @media (max-width:$mobileSmall){
+    flex: 0 0 40px;
+    height: 40px;
+    margin-right: 20px;
+  }
+}
+
+.spollers__title {
+	position: relative;
+	._spoller-init & {
+    @media (max-width: 700px){
+      cursor: pointer;
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        background-color: #000;
+        border-radius: 8px;
+        height: 2px;
+        width: 10px;
+        transition: transform 0.5s ease 0s;
+      }
+      &::before {
+        transform: translate(-68%, -50%) rotate(40deg);
+      }
+      &::after {
+        transform: translate(0, -50%) rotate(-40deg);
+      }
+      &._spoller-active {
+        &::before {
+          transform: translateX(-68%) rotate(-40deg);
+        }
+        &::after {
+          transform: rotate(40deg);
+        }
+      }
+    }
+	}
+}

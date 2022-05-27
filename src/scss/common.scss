@@ -1,0 +1,120 @@
+.skills {
+  margin-bottom: 100px;
+  @media (max-width:$pc){
+    margin-bottom: 80px;
+  }
+  @media (max-width:$tablet){
+    margin-bottom: 60px;
+  }
+  @media (max-width:$mobileSmall){
+    margin-bottom: 40px;
+  }
+  @media (max-width: 350px){
+    margin-bottom: 30px;
+  }
+}
+.main-title {
+  padding-top: 135px;
+  font-size: 65px;
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 70px;
+  @media (max-width:$pc){
+    font-size: 55px;
+    margin-bottom: 60px;
+    padding-top: 130px;
+  }
+  @media (max-width:$tablet){
+    margin-bottom: 40px;
+    font-size: 50px;
+    padding-top: 100px;
+  }
+  @media (max-width:$mobile){
+    padding-top: 80px;
+  }
+  @media (max-width:$mobileSmall){
+    margin-bottom: 30px;
+    font-size: 38px;
+  }
+  @media (max-width: 350px){
+    margin-bottom: 25px;
+    font-size: 30px;
+  }
+}
+
+
+.social-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+
+}
+
+.social-link {
+  flex: 0 0 30px;
+  height: 32px;
+
+  &:hover {
+    color: $orangeColor;
+  }
+  svg {
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.social-links--float {
+  position: fixed;
+  left: 5%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.8;
+  flex-direction: column;
+  .social-link {
+    flex: 0 0 37px;
+    height: 26px;
+    &--youtube {
+      margin-bottom: -4px;
+    }
+  }
+  
+}
+
+.user-contact {
+  &__title {
+    &:not(:last-child) {
+      margin-bottom: 25px;
+    }
+    @media (max-width:$tablet){
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+      margin-bottom: 15px;
+    }
+    span {
+      font-weight: 600;
+      margin-right: 8px;
+    }
+    @media (max-width:$pc){
+      font-size: 20px;
+    }
+    @media (max-width:$mobileSmall){
+      font-size: 16px;
+    }
+    a {
+      &:hover {
+        color: $orangeColor;
+      }
+    }
+  }
+}
+
+a {
+  cursor: pointer;
+}
+.text-link {
+  &:hover {
+    color: $orangeColor;
+    text-decoration: underline;
+  }
+}
